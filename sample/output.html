@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEWSLETTER</title>
+    <style>
+        *
+        {
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <h1>THE NEWSLETTER ARE:</h1>
+{% for i in articles %}
+<div class="article">
+    <h2>{{i.title}}</h2>
+    <p>{{i.summary}}</p>
+    <a href="{{i.link}}" target="_blank">click the link</a>
+</div>
+{% endfor %}
+</body>
+</html>
